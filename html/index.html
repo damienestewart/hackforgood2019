@@ -1,12 +1,30 @@
 <html>
+    <!-- Built following tutorial @: https://developers.google.com/blockly/guides/configure/web/fixed-size -->
     <head>
         <title>HackForGood-Snap</title>
         <meta charset="utf8">
         <meta name="description" content="Microsoft Hack For Good 2019.">
         <script src="../blockly/blockly_compressed.js"></script>
         <script src="../blockly/blocks_compressed.js"></script>
+        <script src="../blockly/msg/js/en.js"></script>
     </head>
     <body>
-
+        <!-- Toolbox -->
+        <xml id="toolbox" style="display: none">
+            <block type="controls_if"></block>
+            <block type="controls_repeat_ext"></block>
+            <block type="logic_compare"></block>
+            <block type="math_number"></block>
+            <block type="math_arithmetic"></block>
+            <block type="text"></block>
+            <block type="text_print"></block>
+        </xml>
+        <!-- Div for injectiving blockly -->
+        <div id="blocklyDiv" style="height: 480px; width: 600px;"></div>
+        
+        <script>
+            var workspace = Blockly.inject('blocklyDiv',
+                {toolbox: document.getElementById('toolbox')});
+        </script>
     </body>
 </html>
