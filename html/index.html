@@ -11,17 +11,27 @@
     <body>
         <!-- Toolbox -->
         <xml id="toolbox" style="display: none">
-            <block type="controls_if"></block>
-            <block type="controls_repeat_ext"></block>
-            <block type="logic_compare"></block>
-            <block type="math_number"></block>
-            <block type="math_arithmetic"></block>
-            <block type="text"></block>
-            <block type="text_print"></block>
+            <!-- Fill category with block types:  -->
+            <!-- Block types defined in ../blockly/blocks -->
+            <!-- Custom defined blocks: https://developers.google.com/blockly/guides/create-custom-blocks/overview-->
+            <category name="Motion"></category>
+            <category name="Looks"></category>
+            <category name="Sounds"></category>
+            <category name="Pen"></category>
+            <category name="Control">
+                <block type="controls_if"></block>
+                <block type="controls_whileUntil"></block>
+                <block type="controls_for">
+            </category>
+            <category name="Sensing"></category>
+            <category name="Operations"></category>
+            <category name="Variables" custom="VARIABLE"></category>
+            <category name="Functions" custom="PROCEDURE"></category>
         </xml>
         <!-- Div for injectiving blockly -->
+        <!-- Information on saving workspace (bottom of page): https://developers.google.com/blockly/guides/get-started/web -->
         <div id="blocklyDiv" style="height: 480px; width: 600px;"></div>
-        
+
         <script>
             var workspace = Blockly.inject('blocklyDiv',
                 {toolbox: document.getElementById('toolbox')});
