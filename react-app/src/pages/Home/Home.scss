@@ -1,0 +1,70 @@
+.container {
+  padding: 10px;
+  max-width: 1043px;
+  margin: 0 auto;
+}
+
+.persona-container {
+  margin-top: 23px;
+}
+
+ul.skills-list {
+  list-style-type: none;
+  padding-inline-start: 0;
+
+  li.tag {
+    display: inline-block;
+    padding: 2px 7px 4px;
+    margin: 0 3px 3px 0;
+    border-radius: 6px;
+    line-height: 19px;
+    background-color: #106ebe;
+    color: white;
+
+    &:hover {
+      background-color: #0078d4;
+      cursor: default;
+    }
+  }
+}
+
+.empty-skills {
+  color: #444;
+  font-style: italic;
+}
+
+.linked-accounts {
+  margin-top: 23px;
+
+  .ms-Viewport {
+    max-width: 880px;
+  }
+
+  .skills-col-spinner {
+    justify-content: left;
+    align-items: start;
+  }
+
+  button.unlink-button {
+    background-color: #e81123;
+
+    &:hover {
+      background-color: darken(#e81123, 5%);
+    }
+  }
+}
+
+.link-account-button,
+.profile-loading {
+  margin-top: 23px;
+}
+
+.large-spinner {
+  justify-content: left;
+  margin-bottom: 14px;
+}
+
+.feedback-button-container {
+  margin-top: 23px;
+  display: inline-block;
+}

@@ -1,0 +1,86 @@
+# A build pipeline to verify that code merged to Master is valid,
+# and produce the build artifacts for each environment needed for the release pipelines
+variables:
+  projectFolder: '$(System.DefaultWorkingDirectory)'
+  buildOutputFolder: '$(projectFolder)/dist/'
+  deploymentDropFolder: '$(projectFolder)/config/deployment/'
+
+trigger:
+  branches:
+    include:
+      - 'master'
+
+pool:
+  name: Hosted VS2017
+  demands: npm
+
+steps:
+  - task: Npm@1
+    displayName: 'npm ci'
+    inputs:
+      command: custom
+      verbose: false
+      customCommand: ci
+
+  - task: Npm@1
+    displayName: 'npm test'
+    inputs:
+      command: custom
+      verbose: false
+      customCommand: run test:coverage
+
+  # Build for all the environments required in the release pipelines
+  - task: Npm@1
+    displayName: 'npm build:all'
+    inputs:
+      command: custom
+      verbose: false
+      customCommand: 'run build:all'
+
+  - task: PublishTestResults@2
+    displayName: 'Publish Test Results **\*.trx'
+    inputs:
+      testResultsFormat: VSTest
+      testResultsFiles: '**\*.trx'
+      testRunTitle: 'Jest Test Results'
+
+  - task: PublishCodeCoverageResults@1
+    displayName: 'Publish Code Coverage Reports'
+    inputs:
+      codeCoverageTool: Cobertura
+      summaryFileLocation: '$(System.DefaultWorkingDirectory)/coverage/cobertura-coverage.xml'
+      reportDirectory: '$(System.DefaultWorkingDirectory)/coverage'
+      failIfCoverageEmpty: true
+
+  # Archive each build and upload as an artifact
+  # Production build
+  - task: ArchiveFiles@2
+    displayName: 'Archive Production Build'
+    inputs:
+      rootFolderOrFile: '$(buildOutputFolder)/production/'
+      includeRootFolder: false
+      archiveFile: '$(Build.ArtifactStagingDirectory)/production.zip'
+
+  # BVT build
+  - task: ArchiveFiles@2
+    displayName: 'Archive BVT Build'
+    inputs:
+      rootFolderOrFile: '$(buildOutputFolder)/bvt/'
+      includeRootFolder: false
+      archiveFile: '$(Build.ArtifactStagingDirectory)/bvt.zip'
+
+  # Copy the ARM template and parameter files for release pipelines into the artifact staging folder
+  - task: CopyFiles@2
+    displayName: 'Copy ARM Templates to Staging Folder'
+    inputs:
+      sourceFolder: '$(deploymentDropFolder)'
+      targetFolder: '$(Build.ArtifactStagingDirectory)/azuredeploy/'
+      overWrite: true
+
+  # Publish all builds and deployment configurations as artifacts
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish Artifacts'
+    inputs:
+      pathtoPublish: '$(Build.ArtifactStagingDirectory)'
+      parallel: true
+      parallelCount: 8
