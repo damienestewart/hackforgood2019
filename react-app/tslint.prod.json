@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "./tslint.json"
+  ],
+  "linterOptions": {
+    "exclude": [
+      "**/*.js",
+      "./node_modules/**/*.ts"
+    ]
+  },
+  "defaultSeverity": "error",
+  "rules": {
+    "completed-docs": true
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "project-name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "prefixparam": {
+      "type": "string",
+      "minLength": 1,
+      "defaultValue": "wwl"
+    },
+    "environment": {
+      "type": "string",
+      "minLength": 1
+    },
+    "hosting-plan-sku": {
+      "type": "string",
+      "defaultValue": "S1",
+      "allowedValues": [
+        "S1",
+        "S2",
+        "S3",
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    }
+  },
+  "variables": {
+    "stage-project-name": "parameters('project-name')-stage",
+    "hosting-plan-name": "[concat(parameters('prefixparam'), '-', parameters('environment'), '-', parameters('project-name'), 'Plan')]",
+    "app-name": "[concat(parameters('prefixparam'), '-', parameters('environment'), '-', parameters('project-name'), 'UI')]",
+    "service-url": "[concat('https://', variables('app-name'), '.azurewebsites.net')]",
+    "stage-service-url": "[concat('https://', variables('app-name'), '-stage.azurewebsites.net')]"
+  },
+  "resources": [
+    {
+      "name": "[variables('hosting-plan-name')]",
+      "type": "Microsoft.Web/serverfarms",
+      "location": "[resourceGroup().location]",
+      "apiVersion": "2015-08-01",
+      "sku": {
+        "name": "[parameters('hosting-plan-sku')]"
+      },
+      "dependsOn": [],
+      "properties": {
+        "name": "[variables('hosting-plan-name')]"
+      }
+    },
+    {
+      "apiVersion": "2015-08-01",
+      "type": "Microsoft.Web/sites",
+      "name": "[variables('app-name')]",
+      "location": "[resourceGroup().location]",
+      "identity": {
+        "type": "SystemAssigned"
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Web/serverfarms', variables('hosting-plan-name'))]"
+      ],
+      "properties": {
+        "name": "[variables('app-name')]",
+        "serverFarmId": "[resourceId('Microsoft.Web/serverfarms',variables('hosting-plan-name'))]",
+        "siteConfig": {
+          "AlwaysOn": true
+        }
+      }
+    },
+    {
+      "type": "Microsoft.Web/sites/slots",
+      "apiVersion": "2016-08-01",
+      "name": "[concat(variables('app-name'), '/stage')]",
+      "location": "[resourceGroup().location]",
+      "dependsOn": [
+        "[resourceId('Microsoft.Web/sites', variables('app-name'))]"
+      ],
+      "kind": "app",
+      "properties": {
+        "serverFarmId": "[resourceId('Microsoft.Web/serverfarms',variables('hosting-plan-name'))]"
+      }
+    },
+    {
+      "type": "Microsoft.Web/sites/hostNameBindings",
+      "apiVersion": "2016-08-01",
+      "name": "[concat(variables('app-name'), '/', variables('app-name'), '.azurewebsites.net')]",
+      "location": "Central US",
+      "dependsOn": [
+        "[resourceId('Microsoft.Web/sites', variables('app-name'))]"
+      ],
+      "properties": {
+        "siteName": "variables('app-name')",
+        "hostNameType": "Verified"
+      }
+    },
+    {
+      "type": "Microsoft.Web/sites/siteextensions",
+      "name": "[concat(variables('app-name'), '/', 'IIS.Compression.SiteExtension')]",
+      "apiVersion": "2018-02-01",
+      "location": "[resourceGroup().location]",
+      "properties": {
+        "version": "1.1.2"
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Web/sites', variables('app-name'))]"
+      ]
+    }
+  ],
+  "outputs": {}
+}
