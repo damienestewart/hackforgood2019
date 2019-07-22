@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 
 import { IApplicationState } from '../../store';
 import { SnapFrame } from '../../components/SnapFrame/SnapFrame';
+import { AccessibleDOM } from '../../components/AccessibleDOM/AccessibleDOM';
 import './Home.scss';
 
 interface IComponentState {
@@ -39,6 +40,7 @@ class Home extends React.Component<IAllProps, IComponentState> {
     return (
       <React.Fragment>
         <SnapFrame/>
+        <AccessibleDOM/>
       </React.Fragment>
     );
   }
