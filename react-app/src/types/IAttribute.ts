@@ -7,8 +7,8 @@ export enum IValueType {
 }
 
 export interface IAttribute<P> {
-    isVariableSize:boolean,
-    valueType:IValueType[],
+    isVariableSize: boolean,
+    valueTypes: IValueType[],
     value: P,
     placeholder: P
 }
