@@ -1,20 +1,14 @@
-export enum IAttributeType {
-    SingleValue,
-    SelectedValue,
-    MultiValue,
-    SingleSelectedValue
-}
-
 export enum IValueType {
     Boolean,
     Text,
     Number,
-    List
+    List,
+    Dropdown
 }
 
 export interface IAttribute<P> {
-    attrbuteType:IAttributeType,
-    valueType:IValueType,
+    isVariableSize:boolean,
+    valueType:IValueType[],
     value: P,
     placeholder: P
 }
