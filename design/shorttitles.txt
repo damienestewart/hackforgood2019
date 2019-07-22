@@ -1,0 +1,106 @@
+Sound:
+    play sound
+    play sound until done
+    stop all sounds
+    play a sound at some frequency
+    property of a sound
+    rest for some beats
+    play note for some beats
+    set instrument
+    change tempo
+    set tempo
+    tempo
+    change volume
+    set volume
+    volume
+    change balance
+    set balance
+    balance
+    play some frequency
+    stop frequency
+
+Control:
+    when green flag clicked
+    when some key pressed
+    when I am interacted with
+    when something happens
+    when I receive something
+    broadcast
+    broadcast and wait
+    message
+    warp
+    wait some seconds
+    wait until something happens
+    forever
+    repeat
+    repeat until something happens
+    for loop
+    if
+    if else
+    if then else
+    report
+    stop
+    run
+    launch
+    call
+    tell to do something
+    ask to do something
+    run with continuation
+    call with continuation
+    when I start as a clone
+    create a clone
+    a new clone of something
+    delete this clone
+    pause all
+
+Operators
+    addition
+    subtraction
+    multiplication
+    division
+    exponentiation
+    mod
+    round
+    other math operations
+    pick random
+    less than
+    equal to
+    greater than
+    and
+    or
+    not
+    boolean switch
+    join
+    split
+    letter of some string
+    length of some string
+    unicode of some char as int
+    unicode of some int as char
+    is some input some type?
+    is some input identical to some other input?
+    JavaScript function
+
+Variables
+    set variable
+    change variable
+    show variable
+    hide variable
+    script variables
+    inherit variable
+    list
+    numbers in some range
+    some input in front of some list
+    some item from some list
+    all but first item of some list
+    length of some list
+    some list contains some input
+    is some list empty?
+    map
+    keep items
+    find first item
+    combine
+    for each item in some list
+    add some input to some list
+    delete something from some list
+    insert some input into some list at some position
+    replace some item of some list with some input
