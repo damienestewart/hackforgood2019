@@ -1,8 +1,9 @@
+
 import * as React from 'react';
 import { connect } from 'react-redux';
 
 import { IApplicationState } from '../../store';
-
+import { SnapFrame } from '../../components/SnapFrame/SnapFrame';
 import './Home.scss';
 
 interface IComponentState {
@@ -37,7 +38,7 @@ class Home extends React.Component<IAllProps, IComponentState> {
   public render(): React.ReactNode {
     return (
       <React.Fragment>
-        
+        <SnapFrame/>
       </React.Fragment>
     );
   }
