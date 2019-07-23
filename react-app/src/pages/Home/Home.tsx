@@ -56,7 +56,7 @@ class Home extends React.Component<IAllProps, IComponentState> {
     }
     return (
       <React.Fragment>
-        <SnapFrame/>
+        {/* <SnapFrame/> */}
         <AccessibleDiv {...accessProps}/>
       </React.Fragment>
     );

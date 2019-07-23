@@ -26,9 +26,7 @@ export interface INavigationState{
 }
 
 export const withNavigation = <P extends INavigationProps>(Component: React.ComponentType<P>) =>{
-class withNavigation extends React.Component<P & INavigationConfig, INavigationState> {
-
-        public refSource: React.RefObject<any> = React.createRef();
+    return class WithNavigation extends React.Component<P & INavigationConfig, INavigationState> {
 
         constructor(props:P & INavigationConfig){
             super(props);
@@ -61,10 +59,8 @@ class withNavigation extends React.Component<P & INavigationConfig, INavigationS
         }
 
         render() {
-            return <Component {...this.props as P} onKeyDown={this._onKeyDown} ref={this.refSource}/>;
+            return <Component {...this.props as P} onKeyDown={this._onKeyDown}/>;
         }
     };
-
-    return 
 }
     
