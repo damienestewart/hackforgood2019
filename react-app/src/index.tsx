@@ -15,7 +15,6 @@ import './index.scss';
 
 initializeIcons();
 
-
 const renderContent = () => {
   return (
     <Provider store={store}>

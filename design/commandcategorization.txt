@@ -1,0 +1,103 @@
+Control
+    "Initialization"
+        when flag clicked
+        when _ key pressed
+        when I am _
+        when _
+        when I receive _
+    event handlers
+        broadcast _
+        broadcast _ and wait
+        message
+        wait _ secs
+        wait until _
+    loops
+        forever
+        repeat _
+        repeat until _
+        for
+    conditionals
+        if _
+        if/else
+        if/then/else
+    "timing"/"debug"
+        warp
+        report
+        stop _
+        pause all
+    function calls
+        run _
+        launch _
+        call _
+        tell _ to _
+        ask _ for _
+        run _ w/continuation
+        call _ w/continuation
+    clone
+        when I start as a clone
+        create a clone of _
+        a new clone of _
+        delete this clone
+
+Sound
+    properties
+        _ of sound _
+        tempo
+        volume
+        balance
+    play
+        play sound _
+        play sound _ until done
+        stop all sounds
+        play sound _ at _ hz
+        rest
+        play note _ for _ beats
+    manipulation
+        set instrument
+        change/set tempo
+        change/set volume
+        change/set balance
+
+Operators
+    math
+        everything from + to random
+    boolean
+        all boolean things
+        is _ a _?
+        is _ identical to _?
+    string
+        string operations
+    javascript
+
+Variables
+    variable creation and manipulation
+        set
+        change
+        show
+        hide
+        script
+        inherit
+    
+    list generation
+        list _
+        numbers from
+        _ in front of _
+        all but first of
+
+    list properties
+    
+    list manipulation and access
+        item _ of _
+        add
+        delete
+        insert
+        replace
+
+    list iterators
+        map
+        keep
+        find
+        combine
+        foreach
+
+note: names and categorizations not finalized; this is a draft
