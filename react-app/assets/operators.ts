@@ -1,25 +1,24 @@
-import { IBlock, BlockCategory } from "../src/types/IBlock";
+import { IBlock, BlockCategory, BlockReturnType } from "../src/types/IBlock";
 import { IValueType } from "../src/types/IAttribute";
 
 export const operators : IBlock<any>[] = [
     {
         title:'addition',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.Any,
         attributes: [
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:[
-                    IValueType.Number
-                ],
+                valueTypes:IValueType.Number,
                 value:null
             },
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:[
-                    IValueType.Number
-                ],
+                valueTypes:IValueType.Number,
                 value:null
             }
         ],
@@ -28,21 +27,20 @@ export const operators : IBlock<any>[] = [
     {
         title:'subtraction',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.Any,
         attributes: [
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:[
-                    IValueType.Number
-                ],
+                valueTypes:IValueType.Number,
                 value:null
             },
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:[
-                    IValueType.Number
-                ],
+                valueTypes:IValueType.Number,
                 value:null
             }
         ],
@@ -51,21 +49,20 @@ export const operators : IBlock<any>[] = [
     {
         title:'multiplication',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.Any,
         attributes: [
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:[
-                    IValueType.Number
-                ],
+                valueTypes:IValueType.Number,
                 value:null
             },
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:[
-                    IValueType.Number
-                ],
+                valueTypes:IValueType.Number,
                 value:null
             }
         ],
@@ -74,21 +71,20 @@ export const operators : IBlock<any>[] = [
     {
         title:'division',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.Any,
         attributes: [
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:[
-                    IValueType.Number
-                ],
+                valueTypes:IValueType.Number,
                 value:null
             },
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:[
-                    IValueType.Number
-                ],
+                valueTypes:IValueType.Number,
                 value:null
             }
         ],
@@ -97,21 +93,20 @@ export const operators : IBlock<any>[] = [
     {
         title:'exponentiation',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.Any,
         attributes: [
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:[
-                    IValueType.Number
-                ],
+                valueTypes:IValueType.Number,
                 value:null
             },
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:[
-                    IValueType.Number
-                ],
+                valueTypes:IValueType.Number,
                 value:null
             }
         ],
@@ -120,21 +115,20 @@ export const operators : IBlock<any>[] = [
     {
         title:'mod',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.Any,
         attributes: [
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:[
-                    IValueType.Number
-                ],
+                valueTypes:IValueType.Number,
                 value:null
             },
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:[
-                    IValueType.Number
-                ],
+                valueTypes:IValueType.Number,
                 value:null
             }
         ],
@@ -143,13 +137,13 @@ export const operators : IBlock<any>[] = [
     {
         title:'round',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.Any,
         attributes: [
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:[
-                    IValueType.Number
-                ],
+                valueTypes:IValueType.Number,
                 value:null
             }
         ],
@@ -158,21 +152,20 @@ export const operators : IBlock<any>[] = [
     {
         title:'other math operations',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.Any,
         attributes: [
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:"sqrt", // TODO: Make Enum for other math operations
-                valueTypes:[
-                    IValueType.Dropdown
-                ],
+                valueTypes:IValueType.Dropdown,
                 value:null
             },
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:10,
-                valueTypes:[
-                    IValueType.Number
-                ],
+                valueTypes:IValueType.Number,
                 value:null
             }
         ],
@@ -181,21 +174,20 @@ export const operators : IBlock<any>[] = [
     {
         title:'pick random',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.Any,
         attributes: [
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:1, 
-                valueTypes:[
-                    IValueType.Number
-                ],
+                valueTypes:IValueType.Number,
                 value:null
             },
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:10,
-                valueTypes:[
-                    IValueType.Number
-                ],
+                valueTypes:IValueType.Number,
                 value:null
             }
         ],
@@ -204,21 +196,20 @@ export const operators : IBlock<any>[] = [
     {
         title:'less than',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.Boolean,
         attributes: [
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null, 
-                valueTypes:[
-                    IValueType.Number
-                ],
+                valueTypes:IValueType.Number,
                 value:null
             },
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:[
-                    IValueType.Number
-                ],
+                valueTypes:IValueType.Number,
                 value:null
             }
         ],
@@ -227,21 +218,20 @@ export const operators : IBlock<any>[] = [
     {
         title:'equal to',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.Boolean,
         attributes: [
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null, 
-                valueTypes:[
-                    IValueType.Number
-                ],
+                valueTypes:IValueType.Number,
                 value:null
             },
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:[
-                    IValueType.Number
-                ],
+                valueTypes:IValueType.Number,
                 value:null
             }
         ],
@@ -250,21 +240,20 @@ export const operators : IBlock<any>[] = [
     {
         title:'greater than',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.Boolean,
         attributes: [
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null, 
-                valueTypes:[
-                    IValueType.Number
-                ],
+                valueTypes:IValueType.Number,
                 value:null
             },
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:[
-                    IValueType.Number
-                ],
+                valueTypes:IValueType.Number,
                 value:null
             }
         ],
@@ -273,21 +262,20 @@ export const operators : IBlock<any>[] = [
     {
         title:'and',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.Boolean,
         attributes: [
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null, 
-                valueTypes:[
-                    IValueType.Boolean
-                ],
+                valueTypes:IValueType.Boolean,
                 value:null
             },
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:[
-                    IValueType.Boolean
-                ],
+                valueTypes:IValueType.Boolean,
                 value:null
             }
         ],
@@ -296,21 +284,20 @@ export const operators : IBlock<any>[] = [
     {
         title:'or',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.Boolean,
         attributes: [
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null, 
-                valueTypes:[
-                    IValueType.Boolean
-                ],
+                valueTypes:IValueType.Boolean,
                 value:null
             },
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:[
-                    IValueType.Boolean
-                ],
+                valueTypes:IValueType.Boolean,
                 value:null
             }
         ],
@@ -319,13 +306,13 @@ export const operators : IBlock<any>[] = [
     {
         title:'not',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.Boolean,
         attributes: [
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null, 
-                valueTypes:[
-                    IValueType.Boolean
-                ],
+                valueTypes:IValueType.Boolean,
                 value:null
             }
         ],
@@ -334,13 +321,13 @@ export const operators : IBlock<any>[] = [
     {
         title:'boolean switch',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.Boolean,
         attributes: [
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:true, 
-                valueTypes:[
-                    IValueType.Boolean // Maybe dropdown would work here
-                ],
+                valueTypes:IValueType.Boolean,
                 value:null
             }
         ],
@@ -349,13 +336,13 @@ export const operators : IBlock<any>[] = [
     { // TODO : Talk about how arrays are represented
         title:'join',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.Any,
         attributes: [
             {
                 isVariableSize:true,
+                isVariableGenerator:true,
                 placeholder:["hello", "world"], 
-                valueTypes:[
-                    IValueType.Text
-                ],
+                valueTypes:IValueType.Text,
                 value:null
             }
         ],
@@ -364,21 +351,20 @@ export const operators : IBlock<any>[] = [
     {
         title:'split',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.Any,
         attributes: [
             {
                 isVariableSize:false,
+                isVariableGenerator: false,
                 placeholder:"hello world", 
-                valueTypes:[
-                    IValueType.Text
-                ],
+                valueTypes:IValueType.Text,
                 value:null
             },
             {
                 isVariableSize:true,
+                isVariableGenerator: false,
                 placeholder:null, 
-                valueTypes:[
-                    IValueType.Dropdown
-                ],
+                valueTypes:IValueType.Dropdown,
                 value:null
             }
         ],
@@ -387,22 +373,20 @@ export const operators : IBlock<any>[] = [
     {
         title:'letter of some string',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.Any,
         attributes: [
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:1, 
-                valueTypes:[
-                    IValueType.Dropdown,
-                    IValueType.Number
-                ],
+                valueTypes:IValueType.DropdownNumber,
                 value:null
             },
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:"world", 
-                valueTypes:[
-                    IValueType.Text
-                ],
+                valueTypes:IValueType.Text,
                 value:null
             }
         ],
@@ -411,13 +395,13 @@ export const operators : IBlock<any>[] = [
     {
         title:'length of some string',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.Any,
         attributes: [
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:"world", 
-                valueTypes:[
-                    IValueType.Text
-                ],
+                valueTypes:IValueType.Text,
                 value:null
             }
         ],
@@ -426,13 +410,13 @@ export const operators : IBlock<any>[] = [
     {
         title:'unicode of some char as int',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.Any,
         attributes: [
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:'a', 
-                valueTypes:[
-                    IValueType.Character
-                ],
+                valueTypes:IValueType.Text,
                 value:null
             }
         ],
@@ -441,13 +425,13 @@ export const operators : IBlock<any>[] = [
     {
         title:'unicode of some int as char',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.Any,
         attributes: [
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:65, 
-                valueTypes:[
-                    IValueType.Number
-                ],
+                valueTypes:IValueType.Number,
                 value:null
             }
         ],
@@ -456,21 +440,20 @@ export const operators : IBlock<any>[] = [
     {
         title:'is some input some type?',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.Boolean,
         attributes: [
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:5, 
-                valueTypes:[
-                    IValueType.Number
-                ],
+                valueTypes:IValueType.Number,
                 value:null
             },
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:"number", 
-                valueTypes:[
-                    IValueType.Dropdown
-                ],
+                valueTypes:IValueType.Dropdown,
                 value:null
             }
         ],
@@ -479,29 +462,20 @@ export const operators : IBlock<any>[] = [
     {
         title:'is some input identical to some other input?',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.Boolean,
         attributes: [
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null, 
-                valueTypes:[
-                    IValueType.Number,
-                    IValueType.Boolean,
-                    IValueType.Character,
-                    IValueType.List,
-                    IValueType.Text
-                ],
+                valueTypes:IValueType.Any,
                 value:null
             },
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null, 
-                valueTypes:[
-                    IValueType.Number,
-                    IValueType.Boolean,
-                    IValueType.Character,
-                    IValueType.List,
-                    IValueType.Text
-                ],
+                valueTypes:IValueType.Any,
                 value:null
             }
         ],
@@ -510,21 +484,20 @@ export const operators : IBlock<any>[] = [
     {
         title:'Javascript function',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.Any,
         attributes: [
             {
                 isVariableSize:true,
+                isVariableGenerator:false,
                 placeholder:null, 
-                valueTypes:[
-                    IValueType.Text
-                ],
+                valueTypes:IValueType.Text,
                 value:null
             },
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null, 
-                valueTypes:[
-                    IValueType.Text
-                ],
+                valueTypes:IValueType.Text,
                 value:null
             }
         ],
