@@ -3,7 +3,8 @@ export enum IValueType {
     Text,
     Number,
     List,
-    Dropdown
+    Dropdown,
+    Block
 }
 
 export interface IAttribute<P> {
