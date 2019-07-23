@@ -1,7 +1,8 @@
 import { IAttribute } from "./IAttribute";
 
 export enum BlockCategory{
-    Sound
+    Sound,
+    Control
 }
 
 export interface IBlock<P> {
