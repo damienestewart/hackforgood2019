@@ -2,6 +2,7 @@ import { IAttribute } from "./IAttribute";
 
 export enum BlockCategory{
     Sound,
+    Control,
     Variable
 }
 
