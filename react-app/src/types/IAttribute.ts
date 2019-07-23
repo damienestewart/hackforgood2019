@@ -4,7 +4,8 @@ export enum IValueType {
     Number,
     List,
     Dropdown,
-    Block
+    Block,
+    Character
 }
 
 export interface IAttribute<P> {
