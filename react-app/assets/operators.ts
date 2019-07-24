@@ -1,462 +1,506 @@
 import { IBlock, BlockCategory, BlockReturnType } from "../src/types/IBlock";
 import { IValueType } from "../src/types/IAttribute";
 
-export const variables : IBlock<any>[] = [
+export const operators : IBlock<any>[] = [
     {
-        title:'set variable',
+        title:'addition',
         category: BlockCategory.Variable,
-        returnType: BlockReturnType.None,
+        returnType: BlockReturnType.Any,
         attributes: [
             {
                 isVariableSize:false,
                 isVariableGenerator:false,
                 placeholder:null,
+                valueTypes:IValueType.Number,
+                value:null
+            },
+            {
+                isVariableSize:false,
+                isVariableGenerator:false,
+                placeholder:null,
+                valueTypes:IValueType.Number,
+                value:null
+            }
+        ],
+        placeholderText:'{} plus {}'
+    },
+    {
+        title:'subtraction',
+        category: BlockCategory.Variable,
+        returnType: BlockReturnType.Any,
+        attributes: [
+            {
+                isVariableSize:false,
+                isVariableGenerator:false,
+                placeholder:null,
+                valueTypes:IValueType.Number,
+                value:null
+            },
+            {
+                isVariableSize:false,
+                isVariableGenerator:false,
+                placeholder:null,
+                valueTypes:IValueType.Number,
+                value:null
+            }
+        ],
+        placeholderText:'{} minus {}'
+    },
+    {
+        title:'multiplication',
+        category: BlockCategory.Variable,
+        returnType: BlockReturnType.Any,
+        attributes: [
+            {
+                isVariableSize:false,
+                isVariableGenerator:false,
+                placeholder:null,
+                valueTypes:IValueType.Number,
+                value:null
+            },
+            {
+                isVariableSize:false,
+                isVariableGenerator:false,
+                placeholder:null,
+                valueTypes:IValueType.Number,
+                value:null
+            }
+        ],
+        placeholderText:'{} times {}'
+    },
+    {
+        title:'division',
+        category: BlockCategory.Variable,
+        returnType: BlockReturnType.Any,
+        attributes: [
+            {
+                isVariableSize:false,
+                isVariableGenerator:false,
+                placeholder:null,
+                valueTypes:IValueType.Number,
+                value:null
+            },
+            {
+                isVariableSize:false,
+                isVariableGenerator:false,
+                placeholder:null,
+                valueTypes:IValueType.Number,
+                value:null
+            }
+        ],
+        placeholderText:'{} divided by {}'
+    },
+    {
+        title:'exponentiation',
+        category: BlockCategory.Variable,
+        returnType: BlockReturnType.Any,
+        attributes: [
+            {
+                isVariableSize:false,
+                isVariableGenerator:false,
+                placeholder:null,
+                valueTypes:IValueType.Number,
+                value:null
+            },
+            {
+                isVariableSize:false,
+                isVariableGenerator:false,
+                placeholder:null,
+                valueTypes:IValueType.Number,
+                value:null
+            }
+        ],
+        placeholderText:'{} raised to the power of {}'
+    },
+    {
+        title:'mod',
+        category: BlockCategory.Variable,
+        returnType: BlockReturnType.Any,
+        attributes: [
+            {
+                isVariableSize:false,
+                isVariableGenerator:false,
+                placeholder:null,
+                valueTypes:IValueType.Number,
+                value:null
+            },
+            {
+                isVariableSize:false,
+                isVariableGenerator:false,
+                placeholder:null,
+                valueTypes:IValueType.Number,
+                value:null
+            }
+        ],
+        placeholderText:'{} mod {}'
+    },
+    {
+        title:'round',
+        category: BlockCategory.Variable,
+        returnType: BlockReturnType.Any,
+        attributes: [
+            {
+                isVariableSize:false,
+                isVariableGenerator:false,
+                placeholder:null,
+                valueTypes:IValueType.Number,
+                value:null
+            }
+        ],
+        placeholderText:'round {}'
+    },
+    {
+        title:'other math operations',
+        category: BlockCategory.Variable,
+        returnType: BlockReturnType.Any,
+        attributes: [
+            {
+                isVariableSize:false,
+                isVariableGenerator:false,
+                placeholder:"sqrt", // TODO: Make Enum for other math operations
                 valueTypes:IValueType.Dropdown,
                 value:null
             },
             {
                 isVariableSize:false,
                 isVariableGenerator:false,
-                placeholder:0,
+                placeholder:10,
                 valueTypes:IValueType.Number,
                 value:null
             }
         ],
-        placeholderText:'set {} to {}'
-    }, 
+        placeholderText:'{} of {}'
+    },
     {
-        title:'change variable',
+        title:'pick random',
         category: BlockCategory.Variable,
-        returnType: BlockReturnType.None,
+        returnType: BlockReturnType.Any,
         attributes: [
             {
                 isVariableSize:false,
                 isVariableGenerator:false,
-                placeholder:null,
-                valueTypes:IValueType.Dropdown,
+                placeholder:1, 
+                valueTypes:IValueType.Number,
+                value:null
+            },
+            {
+                isVariableSize:false,
+                isVariableGenerator:false,
+                placeholder:10,
+                valueTypes:IValueType.Number,
+                value:null
+            }
+        ],
+        placeholderText:'pick random {} to {}'
+    },
+    {
+        title:'less than',
+        category: BlockCategory.Variable,
+        returnType: BlockReturnType.Boolean,
+        attributes: [
+            {
+                isVariableSize:false,
+                isVariableGenerator:false,
+                placeholder:null, 
+                valueTypes:IValueType.Number,
                 value:null
             },
             {
                 isVariableSize:false,
                 isVariableGenerator:false,
-                placeholder:0,
+                placeholder:null,
                 valueTypes:IValueType.Number,
                 value:null
             }
         ],
-        placeholderText:'change {} by {}'
-    }, 
+        placeholderText:'{} is less than {}' // Note: Would it be better to have an is here?
+    },
     {
-        title:'show variable',
+        title:'equal to',
         category: BlockCategory.Variable,
-        returnType: BlockReturnType.None,
+        returnType: BlockReturnType.Boolean,
         attributes: [
             {
                 isVariableSize:false,
                 isVariableGenerator:false,
-                placeholder:null,
-                valueTypes:IValueType.Dropdown,
-                value:null
-            }
-        ],
-        placeholderText:'show variable {}'
-    },
-    {
-        title:'hide variable',
-        category: BlockCategory.Variable,
-        returnType: BlockReturnType.None,
-        attributes: [
-            {
-                isVariableSize:false,
-                isVariableGenerator:false,
-                placeholder:null,
-                valueTypes:IValueType.Dropdown,
-                value:null
-            }
-        ],
-        placeholderText:'hide variable {}'
-    },
-    {
-        title:'script variable',
-        category: BlockCategory.Variable,
-        returnType: BlockReturnType.None,
-        attributes: [
-            {
-                isVariableSize:true,
-                isVariableGenerator:false,
-                placeholder:null,
+                placeholder:null, 
                 valueTypes:IValueType.Number,
                 value:null
             },
-        ],
-        placeholderText:'script variables {}'
-    },
-    {
-        title:'inherit variable',
-        category: BlockCategory.Variable,
-        returnType: BlockReturnType.None,
-        attributes: [
             {
                 isVariableSize:false,
                 isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:IValueType.Dropdown,
+                valueTypes:IValueType.Number,
                 value:null
             }
         ],
-        placeholderText:'inherit {}'
+        placeholderText:'{} is equal to {}'
     },
     {
-        title:'list',
+        title:'greater than',
+        category: BlockCategory.Variable,
+        returnType: BlockReturnType.Boolean,
+        attributes: [
+            {
+                isVariableSize:false,
+                isVariableGenerator:false,
+                placeholder:null, 
+                valueTypes:IValueType.Number,
+                value:null
+            },
+            {
+                isVariableSize:false,
+                isVariableGenerator:false,
+                placeholder:null,
+                valueTypes:IValueType.Number,
+                value:null
+            }
+        ],
+        placeholderText:'{} is greater than {}'
+    },
+    {
+        title:'and',
+        category: BlockCategory.Variable,
+        returnType: BlockReturnType.Boolean,
+        attributes: [
+            {
+                isVariableSize:false,
+                isVariableGenerator:false,
+                placeholder:null, 
+                valueTypes:IValueType.Boolean,
+                value:null
+            },
+            {
+                isVariableSize:false,
+                isVariableGenerator:false,
+                placeholder:null,
+                valueTypes:IValueType.Boolean,
+                value:null
+            }
+        ],
+        placeholderText:'{} and {}'
+    },
+    {
+        title:'or',
+        category: BlockCategory.Variable,
+        returnType: BlockReturnType.Boolean,
+        attributes: [
+            {
+                isVariableSize:false,
+                isVariableGenerator:false,
+                placeholder:null, 
+                valueTypes:IValueType.Boolean,
+                value:null
+            },
+            {
+                isVariableSize:false,
+                isVariableGenerator:false,
+                placeholder:null,
+                valueTypes:IValueType.Boolean,
+                value:null
+            }
+        ],
+        placeholderText:'{} or {}'
+    },
+    {
+        title:'not',
+        category: BlockCategory.Variable,
+        returnType: BlockReturnType.Boolean,
+        attributes: [
+            {
+                isVariableSize:false,
+                isVariableGenerator:false,
+                placeholder:null, 
+                valueTypes:IValueType.Boolean,
+                value:null
+            }
+        ],
+        placeholderText:'not {}'
+    },
+    {
+        title:'boolean switch',
+        category: BlockCategory.Variable,
+        returnType: BlockReturnType.Boolean,
+        attributes: [
+            {
+                isVariableSize:false,
+                isVariableGenerator:false,
+                placeholder:true, 
+                valueTypes:IValueType.Boolean,
+                value:null
+            }
+        ],
+        placeholderText:'{}'
+    },
+    { // TODO : Talk about how arrays are represented
+        title:'join',
         category: BlockCategory.Variable,
         returnType: BlockReturnType.Any,
         attributes: [
             {
                 isVariableSize:true,
-                isVariableGenerator:false,
-                placeholder:null,
-                valueTypes:IValueType.Any,
+                isVariableGenerator:true,
+                placeholder:["hello", "world"], 
+                valueTypes:IValueType.Text,
                 value:null
             }
         ],
-        placeholderText:'list {}'
+        placeholderText:'join []'
     },
     {
-        title:'numbers in some range',
+        title:'split',
         category: BlockCategory.Variable,
         returnType: BlockReturnType.Any,
         attributes: [
             {
                 isVariableSize:false,
-                isVariableGenerator:false,
-                placeholder:null,
-                valueTypes:IValueType.Number,
+                isVariableGenerator: false,
+                placeholder:"hello world", 
+                valueTypes:IValueType.Text,
                 value:null
             },
             {
-                isVariableSize:false,
-                isVariableGenerator:false,
-                placeholder:0,
-                valueTypes:IValueType.Number,
+                isVariableSize:true,
+                isVariableGenerator: false,
+                placeholder:null, 
+                valueTypes:IValueType.Dropdown,
                 value:null
             }
         ],
-        placeholderText:'numbers from {} to {}'
+        placeholderText:'split {} by {}'
     },
     {
-        title:'some input in front of some list',
+        title:'letter of some string',
         category: BlockCategory.Variable,
         returnType: BlockReturnType.Any,
         attributes: [
             {
                 isVariableSize:false,
                 isVariableGenerator:false,
-                placeholder:null,
-                valueTypes:IValueType.Any,
-                value:null
-            },
-            {
-                isVariableSize:false,
-                isVariableGenerator:false,
-                placeholder:0,
-                valueTypes:IValueType.List,
-                value:null
-            }
-        ],
-        placeholderText:'{} in front of {}'
-    },
-    {
-        title:'some item from some list',
-        category: BlockCategory.Variable,
-        returnType: BlockReturnType.Any,
-        attributes: [
-            {
-                isVariableSize:false,
-                isVariableGenerator:false,
-                placeholder:null,
+                placeholder:1, 
                 valueTypes:IValueType.DropdownNumber,
                 value:null
             },
             {
                 isVariableSize:false,
                 isVariableGenerator:false,
-                placeholder:0,
-                valueTypes:IValueType.List,
+                placeholder:"world", 
+                valueTypes:IValueType.Text,
                 value:null
             }
         ],
-        placeholderText:'item {} of {}'
+        placeholderText:'letter {} of {}'
     },
     {
-        title:'all but first item of some list',
+        title:'length of some string',
         category: BlockCategory.Variable,
         returnType: BlockReturnType.Any,
         attributes: [
             {
                 isVariableSize:false,
                 isVariableGenerator:false,
-                placeholder:null,
-                valueTypes:IValueType.List,
-                value:null
-            }
-        ],
-        placeholderText:'all but first {}'
-    },
-    {
-        title:'length of some list',
-        category: BlockCategory.Variable,
-        returnType: BlockReturnType.Any,
-        attributes: [
-            {
-                isVariableSize:false,
-                isVariableGenerator:false,
-                placeholder:null,
-                valueTypes:IValueType.List,
+                placeholder:"world", 
+                valueTypes:IValueType.Text,
                 value:null
             }
         ],
         placeholderText:'length of {}'
     },
     {
-        title:'some list contains some thing',
+        title:'unicode of some char as int',
+        category: BlockCategory.Variable,
+        returnType: BlockReturnType.Any,
+        attributes: [
+            {
+                isVariableSize:false,
+                isVariableGenerator:false,
+                placeholder:'a', 
+                valueTypes:IValueType.Text,
+                value:null
+            }
+        ],
+        placeholderText:'unicode of {}'
+    },
+    {
+        title:'unicode of some int as char',
+        category: BlockCategory.Variable,
+        returnType: BlockReturnType.Any,
+        attributes: [
+            {
+                isVariableSize:false,
+                isVariableGenerator:false,
+                placeholder:65, 
+                valueTypes:IValueType.Number,
+                value:null
+            }
+        ],
+        placeholderText:'unicode {} as letter'
+    },
+    {
+        title:'is some input some type?',
+        category: BlockCategory.Variable,
         returnType: BlockReturnType.Boolean,
-        category: BlockCategory.Variable,
         attributes: [
             {
                 isVariableSize:false,
                 isVariableGenerator:false,
-                placeholder:null,
-                valueTypes:IValueType.List,
+                placeholder:5, 
+                valueTypes:IValueType.Number,
                 value:null
             },
             {
                 isVariableSize:false,
                 isVariableGenerator:false,
-                placeholder:0,
-                valueTypes:IValueType.Any,
+                placeholder:"number", 
+                valueTypes:IValueType.Dropdown,
                 value:null
             }
         ],
-        placeholderText:'set {} to {}'
+        placeholderText:'is {} a {} ?' // Should this be written as "question mark"
     },
     {
-        title:'is some list empty',
+        title:'is some input identical to some other input?',
         category: BlockCategory.Variable,
         returnType: BlockReturnType.Boolean,
         attributes: [
             {
                 isVariableSize:false,
                 isVariableGenerator:false,
-                placeholder:null,
-                valueTypes:IValueType.List,
-                value:null
-            }
-        ],
-        placeholderText:'is {} emtpty'
-    },
-    {
-        title:'map',
-        category: BlockCategory.Variable,
-        returnType: BlockReturnType.Any,
-        attributes: [
-            {
-                isVariableSize:false,
-                isVariableGenerator:false,
-                placeholder:null,
-                valueTypes:IValueType.Block,
-                value:null
-            },
-            {
-                isVariableSize:false,
-                isVariableGenerator:false,
-                placeholder:0,
-                valueTypes:IValueType.List,
-                value:null
-            }
-        ],
-        placeholderText:'map {} over {}'
-    },
-    {
-        title:'keep items',
-        category: BlockCategory.Variable,
-        returnType: BlockReturnType.Any,
-        attributes: [
-            {
-                isVariableSize:false,
-                isVariableGenerator:false,
-                placeholder:null,
-                valueTypes:IValueType.Block,
-                value:null
-            },
-            {
-                isVariableSize:false,
-                isVariableGenerator:false,
-                placeholder:0,
-                valueTypes:IValueType.List,
-                value:null
-            }
-        ],
-        placeholderText:'keep items {} from {}'
-    },
-    {
-        title:'find first item',
-        category: BlockCategory.Variable,
-        returnType: BlockReturnType.Any,
-        attributes: [
-            {
-                isVariableSize:false,
-                isVariableGenerator:false,
-                placeholder:null,
-                valueTypes:IValueType.Block,
-                value:null
-            },
-            {
-                isVariableSize:false,
-                isVariableGenerator:false,
-                placeholder:0,
-                valueTypes:IValueType.List,
-                value:null
-            }
-        ],
-        placeholderText:'find first item {} in {}'
-    },
-    {
-        title:'combine',
-        category: BlockCategory.Variable,
-        returnType: BlockReturnType.Any,
-        attributes: [
-            {
-                isVariableSize:false,
-                isVariableGenerator:false,
-                placeholder:null,
-                valueTypes:IValueType.List,
-                value:null
-            },
-            {
-                isVariableSize:false,
-                isVariableGenerator:false,
-                placeholder:0,
-                valueTypes:IValueType.Block,
-                value:null
-            }
-        ],
-        placeholderText:'combine {} using {}'
-    },
-    {
-        title:'for each item in some list',
-        category: BlockCategory.Variable,
-        returnType: BlockReturnType.None,
-        attributes: [ //TODO: We did not capture the draggable varibale items here and in script variable
-            {
-                isVariableSize:false,
-                isVariableGenerator:true,
-                placeholder:0,
-                valueTypes:IValueType.List,
-                value:null
-            }
-        ],
-        placeholderText:'for each {} in {}'
-    },    
-    {
-        title:'add some input to some list',
-        category: BlockCategory.Variable,
-        returnType: BlockReturnType.None,
-        attributes: [
-            {
-                isVariableSize:false,
-                isVariableGenerator:false,
-                placeholder:null,
-                valueTypes:IValueType.DropdownAny,
-                value:null
-            },
-            {
-                isVariableSize:false,
-                isVariableGenerator:false,
-                placeholder:0,
-                valueTypes:IValueType.List,
-                value:null
-            }
-        ],
-        placeholderText:'add {} to {}'
-    },    
-    {
-        title:'delete something from some list',
-        category: BlockCategory.Variable,
-        returnType: BlockReturnType.None,
-        attributes: [
-            {
-                isVariableSize:false,
-                isVariableGenerator:false,
-                placeholder:null,
-                valueTypes:IValueType.DropdownNumber,
-                value:null
-            },
-            {
-                isVariableSize:false,
-                isVariableGenerator:false,
-                placeholder:0,
-                valueTypes:IValueType.List,
-                value:null
-            }
-        ],
-        placeholderText:'delete {} of {}'
-    },
-    {
-        title:'insert some input into some list at some position', //Maybe change the wording here?
-        category: BlockCategory.Variable,
-        returnType: BlockReturnType.None,
-        attributes: [
-            {
-                isVariableSize:false,
-                isVariableGenerator:false,
-                placeholder:null,
+                placeholder:null, 
                 valueTypes:IValueType.Any,
                 value:null
             },
             {
                 isVariableSize:false,
                 isVariableGenerator:false,
-                placeholder:1,
-                valueTypes:IValueType.DropdownNumber,
-                value:null
-            },
-            {
-                isVariableSize:false,
-                isVariableGenerator:false,
-                placeholder:null,
-                valueTypes:IValueType.List,
-                value:null
-            }
-        ],
-        placeholderText:'insert {} at {} of {}'
-    },
-    {
-        title:'replace some item of some list with some input', 
-        category: BlockCategory.Variable,
-        returnType: BlockReturnType.None,
-        attributes: [            
-            {
-                isVariableSize:false,
-                isVariableGenerator:false,
-                placeholder:1,
-                valueTypes:IValueType.DropdownNumber,
-                value:null
-            },
-            {
-                isVariableSize:false,
-                isVariableGenerator:false,
-                placeholder:null,
-                valueTypes:IValueType.List,
-                value:null
-            },
-            {
-                isVariableSize:false,
-                isVariableGenerator:false,
-                placeholder:null,
+                placeholder:null, 
                 valueTypes:IValueType.Any,
                 value:null
             }
         ],
-        placeholderText:'replace item {} of {} with {}'
-    }
+        placeholderText:'is {} identical to {} ?' // Should this be written as "question mark"
+    },
+    {
+        title:'Javascript function',
+        category: BlockCategory.Variable,
+        returnType: BlockReturnType.Any,
+        attributes: [
+            {
+                isVariableSize:true,
+                isVariableGenerator:false,
+                placeholder:null, 
+                valueTypes:IValueType.Text,
+                value:null
+            },
+            {
+                isVariableSize:false,
+                isVariableGenerator:false,
+                placeholder:null, 
+                valueTypes:IValueType.Text,
+                value:null
+            }
+        ],
+        placeholderText:'Javascript function ({}) \{ {} \} ?' // Ask about how to represent curly braces
+    },
 ]

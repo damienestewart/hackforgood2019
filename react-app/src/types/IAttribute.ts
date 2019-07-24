@@ -4,12 +4,17 @@ export enum IValueType {
     Number,
     List,
     Dropdown,
-    Block
+    Block,
+    Any, // Boolean, Text, Number, List, Character, Block
+    DropdownNumber,
+    DropdownTextNumber,
+    DropdownAny
 }
 
 export interface IAttribute<P> {
     isVariableSize: boolean,
-    valueTypes: IValueType[],
+    isVariableGenerator: boolean,
+    valueTypes: IValueType,
     value: P,
     placeholder: P
 }
