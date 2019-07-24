@@ -1,35 +1,33 @@
 import * as React from "react";
-import { CategoryNav } from "./CategoryNav";
-import { BlockNav } from "./BlockNav";
-import { ICategoryName } from "./ICategoryName"
+import { CategoryNavigation } from "./Navigation/CategoryNavigation";
+import { BlockNavigation } from "./Navigation/BlockNavigation";
+import { ICategoryName } from "./ICategoryName";
+import { Stage } from "./Stage/Stage";
 
 export interface IAccessibleDOMProps{}
 export interface IAccessibleDOMState{
-    selectedCategoryName: ICategoryName
+    selectedCategory: ICategoryName
 }
 
 export class AccessibleDOM extends React.Component<IAccessibleDOMProps,IAccessibleDOMState>{
     constructor(props: IAccessibleDOMProps){
         super(props)
         this.state = {
-            selectedCategoryName: ICategoryName.Motion
+            selectedCategory: ICategoryName.Motion
         };
     }
 
-    selectCategoryName(categoryName: ICategoryName)
+    selectCategory(categoryName: ICategoryName) : void
     {
-        this.setState({selectedCategoryName: categoryName});
+        this.setState({selectedCategory: categoryName});
     }
 
     render() {
         return(
             <React.Fragment>
                 <section id="accessible-dom">
-                    <CategoryNav categoryNameChangeHandler={this.selectCategoryName.bind(this)} />
-                    <BlockNav categoryName={this.state.selectedCategoryName} />
-                    <section id="main">
-
-                    </section>
+                    <CategoryNavigation setCategory={this.selectCategory.bind(this)} />
+                    <BlockNavigation categoryName={this.state.selectedCategory} />
                 </section>
             </React.Fragment>
         )
