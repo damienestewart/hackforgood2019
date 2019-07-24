@@ -17,7 +17,7 @@ export class SnapFrame extends React.Component<ISnapFrameProps,ISnapFrameState>{
                     right: 0,
                     width: "100%",
                     height: "100%"
-                }}></iframe>
+                }} tabIndex={-1}></iframe>
             </React.Fragment>
         )
     }

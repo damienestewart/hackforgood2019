@@ -1,25 +1,24 @@
-import { IBlock, BlockCategory } from "../src/types/IBlock";
+import { IBlock, BlockCategory, BlockReturnType } from "../src/types/IBlock";
 import { IValueType } from "../src/types/IAttribute";
 
 export const variables : IBlock<any>[] = [
     {
         title:'set variable',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.None,
         attributes: [
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:[
-                    IValueType.Dropdown
-                ],
+                valueTypes:IValueType.Dropdown,
                 value:null
             },
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:0,
-                valueTypes:[
-                    IValueType.Number
-                ],
+                valueTypes:IValueType.Number,
                 value:null
             }
         ],
@@ -28,21 +27,20 @@ export const variables : IBlock<any>[] = [
     {
         title:'change variable',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.None,
         attributes: [
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:[
-                    IValueType.Dropdown
-                ],
+                valueTypes:IValueType.Dropdown,
                 value:null
             },
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:0,
-                valueTypes:[
-                    IValueType.Number
-                ],
+                valueTypes:IValueType.Number,
                 value:null
             }
         ],
@@ -51,13 +49,13 @@ export const variables : IBlock<any>[] = [
     {
         title:'show variable',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.None,
         attributes: [
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:[
-                    IValueType.Dropdown
-                ],
+                valueTypes:IValueType.Dropdown,
                 value:null
             }
         ],
@@ -66,13 +64,13 @@ export const variables : IBlock<any>[] = [
     {
         title:'hide variable',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.None,
         attributes: [
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:[
-                    IValueType.Dropdown
-                ],
+                valueTypes:IValueType.Dropdown,
                 value:null
             }
         ],
@@ -81,13 +79,13 @@ export const variables : IBlock<any>[] = [
     {
         title:'script variable',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.None,
         attributes: [
             {
                 isVariableSize:true,
+                isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:[
-                    IValueType.Number
-                ],
+                valueTypes:IValueType.Number,
                 value:null
             },
         ],
@@ -96,13 +94,13 @@ export const variables : IBlock<any>[] = [
     {
         title:'inherit variable',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.None,
         attributes: [
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:[
-                    IValueType.Dropdown
-                ],
+                valueTypes:IValueType.Dropdown,
                 value:null
             }
         ],
@@ -111,16 +109,13 @@ export const variables : IBlock<any>[] = [
     {
         title:'list',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.Any,
         attributes: [
             {
                 isVariableSize:true,
+                isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:[
-                    IValueType.Number,
-                    IValueType.Boolean,
-                    IValueType.Text,
-                    IValueType.List
-                ],
+                valueTypes:IValueType.Any,
                 value:null
             }
         ],
@@ -129,21 +124,20 @@ export const variables : IBlock<any>[] = [
     {
         title:'numbers in some range',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.Any,
         attributes: [
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:[
-                    IValueType.Number
-                ],
+                valueTypes:IValueType.Number,
                 value:null
             },
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:0,
-                valueTypes:[
-                    IValueType.Number
-                ],
+                valueTypes:IValueType.Number,
                 value:null
             }
         ],
@@ -152,24 +146,20 @@ export const variables : IBlock<any>[] = [
     {
         title:'some input in front of some list',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.Any,
         attributes: [
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:[
-                    IValueType.Number,
-                    IValueType.List,
-                    IValueType.Text,
-                    IValueType.Boolean
-                ],
+                valueTypes:IValueType.Any,
                 value:null
             },
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:0,
-                valueTypes:[
-                    IValueType.List
-                ],
+                valueTypes:IValueType.List,
                 value:null
             }
         ],
@@ -178,22 +168,20 @@ export const variables : IBlock<any>[] = [
     {
         title:'some item from some list',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.Any,
         attributes: [
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:[
-                    IValueType.Dropdown,
-                    IValueType.Number
-                ],
+                valueTypes:IValueType.DropdownNumber,
                 value:null
             },
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:0,
-                valueTypes:[
-                    IValueType.List
-                ],
+                valueTypes:IValueType.List,
                 value:null
             }
         ],
@@ -202,13 +190,13 @@ export const variables : IBlock<any>[] = [
     {
         title:'all but first item of some list',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.Any,
         attributes: [
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:[
-                    IValueType.List
-                ],
+                valueTypes:IValueType.List,
                 value:null
             }
         ],
@@ -217,13 +205,13 @@ export const variables : IBlock<any>[] = [
     {
         title:'length of some list',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.Any,
         attributes: [
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:[
-                    IValueType.List
-                ],
+                valueTypes:IValueType.List,
                 value:null
             }
         ],
@@ -231,25 +219,21 @@ export const variables : IBlock<any>[] = [
     },
     {
         title:'some list contains some thing',
+        returnType: BlockReturnType.Boolean,
         category: BlockCategory.Variable,
         attributes: [
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:[
-                    IValueType.List
-                ],
+                valueTypes:IValueType.List,
                 value:null
             },
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:0,
-                valueTypes:[
-                    IValueType.Number,
-                    IValueType.Boolean,
-                    IValueType.Text,
-                    IValueType.List
-                ],
+                valueTypes:IValueType.Any,
                 value:null
             }
         ],
@@ -258,13 +242,13 @@ export const variables : IBlock<any>[] = [
     {
         title:'is some list empty',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.Boolean,
         attributes: [
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:[
-                    IValueType.List
-                ],
+                valueTypes:IValueType.List,
                 value:null
             }
         ],
@@ -273,21 +257,20 @@ export const variables : IBlock<any>[] = [
     {
         title:'map',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.Any,
         attributes: [
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:[
-                    IValueType.Block
-                ],
+                valueTypes:IValueType.Block,
                 value:null
             },
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:0,
-                valueTypes:[
-                    IValueType.List
-                ],
+                valueTypes:IValueType.List,
                 value:null
             }
         ],
@@ -296,21 +279,20 @@ export const variables : IBlock<any>[] = [
     {
         title:'keep items',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.Any,
         attributes: [
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:[
-                    IValueType.Block
-                ],
+                valueTypes:IValueType.Block,
                 value:null
             },
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:0,
-                valueTypes:[
-                    IValueType.List
-                ],
+                valueTypes:IValueType.List,
                 value:null
             }
         ],
@@ -319,21 +301,20 @@ export const variables : IBlock<any>[] = [
     {
         title:'find first item',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.Any,
         attributes: [
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:[
-                    IValueType.Block
-                ],
+                valueTypes:IValueType.Block,
                 value:null
             },
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:0,
-                valueTypes:[
-                    IValueType.List
-                ],
+                valueTypes:IValueType.List,
                 value:null
             }
         ],
@@ -342,21 +323,20 @@ export const variables : IBlock<any>[] = [
     {
         title:'combine',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.Any,
         attributes: [
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:[
-                    IValueType.List
-                ],
+                valueTypes:IValueType.List,
                 value:null
             },
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:0,
-                valueTypes:[
-                    IValueType.Block
-                ],
+                valueTypes:IValueType.Block,
                 value:null
             }
         ],
@@ -365,13 +345,13 @@ export const variables : IBlock<any>[] = [
     {
         title:'for each item in some list',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.None,
         attributes: [ //TODO: We did not capture the draggable varibale items here and in script variable
             {
                 isVariableSize:false,
+                isVariableGenerator:true,
                 placeholder:0,
-                valueTypes:[
-                    IValueType.List
-                ],
+                valueTypes:IValueType.List,
                 value:null
             }
         ],
@@ -380,25 +360,20 @@ export const variables : IBlock<any>[] = [
     {
         title:'add some input to some list',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.None,
         attributes: [
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:[
-                    IValueType.Dropdown,
-                    IValueType.Boolean,
-                    IValueType.Number,
-                    IValueType.Text,
-                    IValueType.List
-                ],
+                valueTypes:IValueType.DropdownAny,
                 value:null
             },
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:0,
-                valueTypes:[
-                    IValueType.List
-                ],
+                valueTypes:IValueType.List,
                 value:null
             }
         ],
@@ -407,22 +382,20 @@ export const variables : IBlock<any>[] = [
     {
         title:'delete something from some list',
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.None,
         attributes: [
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:[
-                    IValueType.Dropdown,
-                    IValueType.Number,
-                ],
+                valueTypes:IValueType.DropdownNumber,
                 value:null
             },
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:0,
-                valueTypes:[
-                    IValueType.List
-                ],
+                valueTypes:IValueType.List,
                 value:null
             }
         ],
@@ -431,33 +404,27 @@ export const variables : IBlock<any>[] = [
     {
         title:'insert some input into some list at some position', //Maybe change the wording here?
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.None,
         attributes: [
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:[
-                    IValueType.Boolean,
-                    IValueType.Number,
-                    IValueType.List,
-                    IValueType.Text
-                ],
+                valueTypes:IValueType.Any,
                 value:null
             },
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:1,
-                valueTypes:[
-                    IValueType.Dropdown,
-                    IValueType.Number
-                ],
+                valueTypes:IValueType.DropdownNumber,
                 value:null
             },
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:[
-                    IValueType.List
-                ],
+                valueTypes:IValueType.List,
                 value:null
             }
         ],
@@ -466,33 +433,27 @@ export const variables : IBlock<any>[] = [
     {
         title:'replace some item of some list with some input', 
         category: BlockCategory.Variable,
+        returnType: BlockReturnType.None,
         attributes: [            
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:1,
-                valueTypes:[
-                    IValueType.Dropdown,
-                    IValueType.Number
-                ],
+                valueTypes:IValueType.DropdownNumber,
                 value:null
             },
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:[
-                    IValueType.List
-                ],
+                valueTypes:IValueType.List,
                 value:null
             },
             {
                 isVariableSize:false,
+                isVariableGenerator:false,
                 placeholder:null,
-                valueTypes:[
-                    IValueType.Boolean,
-                    IValueType.Number,
-                    IValueType.List,
-                    IValueType.Text
-                ],
+                valueTypes:IValueType.Any,
                 value:null
             }
         ],
