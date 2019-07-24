@@ -4,8 +4,10 @@ import { connect } from 'react-redux';
 
 import { IApplicationState } from '../../store';
 import { SnapFrame } from '../../components/SnapFrame/SnapFrame';
-import { AccessibleDOM } from '../../components/AccessibleDOM/AccessibleDOM';
+import { AccessibilityExample } from "../../components/withNavigation/AccessibilityExample";
 import './Home.scss';
+
+const categoryButtons:string[] = [ "Motion", "Looks", "Sound"]
 
 interface IComponentState {
 }
@@ -17,6 +19,7 @@ interface IPropsFromDispatch {
 }
 
 type IAllProps = IPropsFromState & IPropsFromDispatch;
+
 
 /**
  * Home page and entry gateway for the application
@@ -32,6 +35,7 @@ class Home extends React.Component<IAllProps, IComponentState> {
     };
   }
 
+
   /**
    * Renders the component
    * @returns Component element
@@ -39,8 +43,8 @@ class Home extends React.Component<IAllProps, IComponentState> {
   public render(): React.ReactNode {
     return (
       <React.Fragment>
-        <SnapFrame/>
-        <AccessibleDOM/>
+        <SnapFrame/> 
+        <AccessibilityExample />
       </React.Fragment>
     );
   }
