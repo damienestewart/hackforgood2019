@@ -12,7 +12,7 @@ export class SnapFrame extends React.Component<ISnapFrameProps,ISnapFrameState>{
         return(
             <React.Fragment>
                 <iframe src="https://snap.berkeley.edu/snap/snap.html" style={{
-                    position: "absolute",
+                    //position: "absolute",
                     left: 0,
                     right: 0,
                     width: "100%",
