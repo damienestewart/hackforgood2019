@@ -16,9 +16,7 @@ export const controls: IBlock<any>[] =
             {
                 isVariableSize:false,
                 placeholder: "space",
-                valueTypes:[
-                    IValueType.Dropdown
-                ],
+                valueTypes: IValueType.Dropdown,
                 value:null
             }
         ],
@@ -31,9 +29,7 @@ export const controls: IBlock<any>[] =
             {
                 isVariableSize:false,
                 placeholder: "clicked",
-                valueTypes:[
-                    IValueType.Dropdown
-                ],
+                valueTypes: IValueType.Dropdown,
                 value:null
             }
         ],
@@ -46,228 +42,355 @@ export const controls: IBlock<any>[] =
             {
                 isVariableSize:false,
                 placeholder:false,
-                valueTypes:[
-                    IValueType.Boolean
-                ],
+                valueTypes: IValueType.Boolean,
                 value:null
             }
         ],
         placeholderText: "when {}"
     },
     {
-        title: "",
+        title: "When I receive",
         category: BlockCategory.Control,
-        attributes: [],
-        placeholderText: ""
+        attributes: [
+            {
+                isVariableSize:false,
+                placeholder:null,
+                valueTypes: IValueType.Dropdown,
+                value:null
+            }
+        ],
+        placeholderText: "When I receive {}"
     },
     {
-        title: "",
+        title: "broadcast",
         category: BlockCategory.Control,
-        attributes: [],
-        placeholderText: ""
+        attributes: [
+            {
+                isVariableSize: false,
+                placeholder: null,
+                valueTypes: IValueType.Dropdown,
+                value:null
+            }
+        ],
+        placeholderText: "broadcast {}"
     },
     {
-        title: "",
+        title: "broadcast and wait",
         category: BlockCategory.Control,
-        attributes: [],
-        placeholderText: ""
+        attributes: [
+            {
+                isVariableSize: false,
+                placeholder:null,
+                valueTypes: IValueType.Dropdown,
+                value:null
+            }
+        ],
+        placeholderText: "broadcast {} and wait"
     },
     {
-        title: "",
+        title: "message",
         category: BlockCategory.Control,
         attributes: [],
-        placeholderText: ""
+        placeholderText: "message"
     },
     {
-        title: "",
+        title: "warp",
         category: BlockCategory.Control,
         attributes: [],
-        placeholderText: ""
+        placeholderText: "warp"
     },
     {
-        title: "",
+        title: "wait some seconds",
         category: BlockCategory.Control,
-        attributes: [],
-        placeholderText: ""
+        attributes: [
+            {
+                isVariableSize:false,
+                placeholder:"1",
+                valueTypes: IValueType.Number,
+                value:null
+            }
+        ],
+        placeholderText: "wait {} seconds"
     },
     {
-        title: "",
+        title: "wait until",
         category: BlockCategory.Control,
-        attributes: [],
-        placeholderText: ""
+        attributes: [
+            {
+                isVariableSize:false,
+                placeholder:null,
+                valueTypes:IValueType.Boolean,
+                value:null
+            }
+        ],
+        placeholderText: "wait until {}"
     },
     {
-        title: "",
+        title: "forever",
         category: BlockCategory.Control,
         attributes: [],
-        placeholderText: ""
+        placeholderText: "forever"
     },
     {
-        title: "",
+        title: "repeat",
         category: BlockCategory.Control,
-        attributes: [],
-        placeholderText: ""
+        attributes: [
+            {
+                isVariableSize: false,
+                placeholder:null,
+                valueTypes:IValueType.Number,
+                value: null
+            }
+        ],
+        placeholderText: "repeat {}"
     },
     {
-        title: "",
+        title: "repeat until",
         category: BlockCategory.Control,
-        attributes: [],
-        placeholderText: ""
+        attributes: [
+            {
+                isVariableSize:false,
+                placeholder:null,
+                valueTypes:IValueType.Boolean,
+                value:null
+            }
+        ],
+        placeholderText: "repeat until {}"
     },
     {
-        title: "",
+        title: "for",
         category: BlockCategory.Control,
-        attributes: [],
-        placeholderText: ""
+        attributes: [
+            {
+                isVariableSize:false,
+                placeholder:null,
+                valueTypes:IValueType.Text
+            }
+        ],
+        placeholderText: "for {} = {} to {}"
     },
     {
-        title: "",
+        title: "if",
         category: BlockCategory.Control,
-        attributes: [],
-        placeholderText: ""
+        attributes: [
+            {
+                isVariableSize:false,
+                placeholder:null,
+                valueTypes:IValueType.Boolean,
+                value:null
+            }
+        ],
+        placeholderText: "if {}"
     },
     {
-        title: "",
+        title: "if else",
         category: BlockCategory.Control,
-        attributes: [],
-        placeholderText: ""
+        attributes: [
+            {
+                isVariableSize: false,
+                placeholder:null,
+                valueTypes:IValueType.Boolean,
+                value:null
+            }
+        ],
+        placeholderText: "if {} else {}"
     },
     {
-        title: "",
+        title: "if then else",
         category: BlockCategory.Control,
-        attributes: [],
-        placeholderText: ""
+        attributes: [
+            {
+                isVariableSize: false,
+                placeholder:null,
+                valueTypes:IValueType.Boolean,
+                value:null
+            },
+            {
+                isVariableSize: false,
+                placeholder:null,
+                valueTypes:IValueType.Boolean,
+                value:null
+            },
+            {
+                isVariableSize: false,
+                placeholder:null,
+                valueTypes:IValueType.Boolean,
+                value:null
+            }
+        ],
+        placeholderText: "if {} then {} else {}"
     },
     {
-        title: "",
+        title: "report",
         category: BlockCategory.Control,
-        attributes: [],
-        placeholderText: ""
+        attributes: [
+            {
+                isVariableSize: false,
+                placeholder:null,
+                valueTypes:IValueType.Text,
+                value:null
+            }
+        ],
+        placeholderText: "report {}"
     },
     {
-        title: "",
+        title: "stop",
         category: BlockCategory.Control,
-        attributes: [],
-        placeholderText: ""
+        attributes: [
+            {
+                isVariableSize: false,
+                placeholder:null,
+                valueTypes:IValueType.Dropdown,
+                value:null
+            }
+        ],
+        placeholderText: "stop {}"
     },
     {
-        title: "",
+        title: "run",
         category: BlockCategory.Control,
-        attributes: [],
-        placeholderText: ""
+        attributes: [
+            {
+                isVariableSize: false,
+                placeholder:null,
+                valueTypes:null,
+                value:null
+            }
+        ],
+        placeholderText: "run {}"
     },
     {
-        title: "",
+        title: "launch",
         category: BlockCategory.Control,
-        attributes: [],
-        placeholderText: ""
+        attributes: [
+            {
+                isVariableSize: false,
+                placeholder:null,
+                valueTypes:null,
+                value:null
+            }
+        ],
+        placeholderText: "launch {}"
     },
     {
-        title: "",
+        title: "call",
         category: BlockCategory.Control,
-        attributes: [],
-        placeholderText: ""
+        attributes: [
+            {
+                isVariableSize: false,
+                placeholder:null,
+                valueTypes:null,
+                value:null
+            }
+        ],
+        placeholderText: "call {}"
     },
     {
-        title: "",
+        title: "tell to",
         category: BlockCategory.Control,
-        attributes: [],
-        placeholderText: ""
+        attributes: [
+            {
+                isVariableSize: false,
+                placeholder:null,
+                valueTypes:null,
+                value:null
+            },
+            {
+                isVariableSize: false,
+                placeholder:null,
+                valueTypes:null,
+                value:null
+            }
+        ],
+        placeholderText: "tell {} to {}"
     },
     {
-        title: "",
+        title: "ask for",
         category: BlockCategory.Control,
-        attributes: [],
-        placeholderText: ""
+        attributes: [
+            {
+                isVariableSize: false,
+                placeholder:null,
+                valueTypes:IValueType.Boolean,
+                value:null
+            },
+            {
+                isVariableSize: false,
+                placeholder:null,
+                valueTypes:null,
+                value:null
+            }
+        ],
+        placeholderText: "ask {} for {}"
     },
     {
-        title: "",
+        title: "run with continuation",
         category: BlockCategory.Control,
-        attributes: [],
-        placeholderText: ""
+        attributes: [
+            {
+                isVariableSize: false,
+                placeholder:null,
+                valueTypes:null,
+                value:null
+            }
+        ],
+        placeholderText: "run {} with continuation"
     },
     {
-        title: "",
+        title: "call with continuation",
         category: BlockCategory.Control,
-        attributes: [],
-        placeholderText: ""
+        attributes: [
+            {
+                isVariableSize: false,
+                placeholder:null,
+                valueTypes:null,
+                value:null
+            }
+        ],
+        placeholderText: "call {} with continuation"
     },
     {
-        title: "",
+        title: "when I start as a clone",
         category: BlockCategory.Control,
         attributes: [],
-        placeholderText: ""
+        placeholderText: "when I start as a clone"
     },
     {
-        title: "",
+        title: "create a clone of",
         category: BlockCategory.Control,
-        attributes: [],
-        placeholderText: ""
+        attributes: [
+            {
+                isVariableSize: false,
+                placeholder:null,
+                valueTypes:IValueType.Dropdown,
+                value:null
+            }
+        ],
+        placeholderText: "create a clone of {}"
     },
     {
-        title: "",
+        title: "a new clone of",
         category: BlockCategory.Control,
-        attributes: [],
-        placeholderText: ""
+        attributes: [
+            {
+                isVariableSize: false,
+                placeholder:["myself"],
+                valueTypes:IValueType.Dropdown,
+                value:null
+            }
+        ],
+        placeholderText: "a new clone of {}"
     },
     {
-        title: "",
+        title: "delete this clone",
         category: BlockCategory.Control,
         attributes: [],
-        placeholderText: ""
+        placeholderText: "delete this clone"
     },
     {
-        title: "",
+        title: "pause all",
         category: BlockCategory.Control,
         attributes: [],
-        placeholderText: ""
-    },
-    {
-        title: "",
-        category: BlockCategory.Control,
-        attributes: [],
-        placeholderText: ""
-    },
-    {
-        title: "",
-        category: BlockCategory.Control,
-        attributes: [],
-        placeholderText: ""
-    },
-    {
-        title: "",
-        category: BlockCategory.Control,
-        attributes: [],
-        placeholderText: ""
-    },
-    {
-        title: "",
-        category: BlockCategory.Control,
-        attributes: [],
-        placeholderText: ""
-    },
-    {
-        title: "",
-        category: BlockCategory.Control,
-        attributes: [],
-        placeholderText: ""
-    },
-    {
-        title: "",
-        category: BlockCategory.Control,
-        attributes: [],
-        placeholderText: ""
-    },
-    {
-        title: "",
-        category: BlockCategory.Control,
-        attributes: [],
-        placeholderText: ""
-    },
-    {
-        title: "",
-        category: BlockCategory.Control,
-        attributes: [],
-        placeholderText: ""
+        placeholderText: "pause all"
     }
 ] 
