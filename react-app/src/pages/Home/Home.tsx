@@ -6,6 +6,7 @@ import { IApplicationState } from '../../store';
 import { SnapFrame } from '../../components/SnapFrame/SnapFrame';
 import { AccessibilityExample } from "../../components/withNavigation/AccessibilityExample";
 import './Home.scss';
+import { AccessibleDOM } from '../../components/AccessibleDOM/AccessibleDOM';
 
 const categoryButtons:string[] = [ "Motion", "Looks", "Sound"]
 
@@ -43,7 +44,8 @@ class Home extends React.Component<IAllProps, IComponentState> {
   public render(): React.ReactNode {
     return (
       <React.Fragment>
-        <SnapFrame/> 
+        <SnapFrame/>
+        <AccessibleDOM />
         <AccessibilityExample />
       </React.Fragment>
     );
