@@ -86,7 +86,7 @@
     "jest-resolve": "24.7.1",
     "jest-trx-results-processor": "0.0.7",
     "mini-css-extract-plugin": "0.6.0",
-    "node-sass": "4.11.0",
+    "node-sass": "4.13.1",
     "optimize-css-assets-webpack-plugin": "5.0.1",
     "pnp-webpack-plugin": "1.4.3",
     "postcss-flexbugs-fixes": "4.1.0",
